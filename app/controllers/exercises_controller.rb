@@ -7,6 +7,10 @@ class ExercisesController < ApplicationController
     Exercise.create(exercise_params)
     redirect_to new_exercise_path
   end
+  
+  def index
+    @exercises = Exercise.all
+  end
 
 
 
