@@ -4,8 +4,12 @@ class ExercisesController < ApplicationController
   end
   
   def create
-    Exercise.create(exercise_params)
-    redirect_to new_exercise_path
+    @exercise = Exercise.new(exercise_params)
+    if @exercise.save
+      redirect_to exercises_path, notice: "You have tweeted newly!!"
+    else
+      render 'new'
+    end
   end
   
   def index
