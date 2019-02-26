@@ -1,5 +1,5 @@
 class ExercisesController < ApplicationController
-  before_action :set_exercise, only: [:edit, :update]
+  before_action :set_exercise, only: [:show, :edit, :update]
 
   def new
     @exercise = Exercise.new

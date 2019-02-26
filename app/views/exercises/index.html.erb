@@ -9,6 +9,7 @@
   <tr>
     <td><%= exercise.content %></td>
     <td><%= link_to 'check tweet detail', exercise_path(exercise.id) %></td>
+    <td><%= link_to "edit your tweet", edit_exercise_path(exercise.id) %></td>
   </tr>
 <% end %>
 </table>
