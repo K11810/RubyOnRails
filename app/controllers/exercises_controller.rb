@@ -2,7 +2,11 @@ class ExercisesController < ApplicationController
   before_action :set_exercise, only: [:edit, :update, :destroy]
 
   def new
-    @exercise = Exercise.new
+    if params[:back]
+     @exercise = Exercise.new(exercise_params)
+    else
+      @exercise = Exercise.new
+    end
   end
   
 
@@ -42,6 +46,7 @@ class ExercisesController < ApplicationController
 
   def confirm
     @exercise = Exercise.new(exercise_params)
+    render :new if @exercise.invalid?
   end
 
 

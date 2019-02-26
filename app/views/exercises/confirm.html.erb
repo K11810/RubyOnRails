@@ -6,3 +6,8 @@
   <p>Content:<%= @exercise.content %></p>
   <%= form.submit  "register your tweet" %>
 <% end %>
+
+<%= form_with(model: @exercise, url: new_exercise_path, local: true, method: 'get') do |form| %>
+  <%= form.hidden_field :content %>
+  <%= form.submit "back to input view", name: 'back' %>
+<% end %>

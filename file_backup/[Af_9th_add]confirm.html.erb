@@ -1,8 +1,0 @@
-<h3>Send your tweet</h3>
-
-<%= form_with(model: @exercise, url: exercises_path, local: true) do |form| %>
-  <%= form.hidden_field :content %>
-
-  <p>Content:<%= @exercise.content %></p>
-  <%= form.submit  "register your tweet" %>
-<% end %>
