@@ -8,7 +8,6 @@
 <% @exercises.each do |exercise| %>
   <tr>
     <td><%= exercise.content %></td>
-    <td><%= link_to 'check tweet detail', exercise_path(exercise.id) %></td>
     <td><%= link_to "edit your tweet", edit_exercise_path(exercise.id) %></td>
     <td><%= link_to 'delete your tweet', exercise_path(exercise.id), method: :delete ,data: { confirm: 'Are you sure deleting your tweet?' } %></td>
   </tr>
@@ -16,3 +15,5 @@
 </table>
 
 <%= link_to 'Go to Tweet Page', new_exercise_path %>
+
+   
