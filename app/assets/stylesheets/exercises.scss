@@ -1,8 +1,3 @@
-// Place all the styles related to the exercises controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-
 li {
   list-style: none;
 }
@@ -25,23 +20,22 @@ header {
 }
 
 .header-list li {
-  color: gray;
+  color: white;
   float: left;
   padding: 33px 20px;
 }
 
 .header-login {
-  color: gray;
+  color: white;
   float: right;
   padding: 53px 60px;
 
 }
 
 footer {
-  background-color: #4D4D4D;
+  background-color: black;
   height: 50px;
   width: 100%;
-  padding: 30px;
   position: absolute;
   bottom: 0;
   display: table;
@@ -49,6 +43,7 @@ footer {
 
 footer p {
   font-size: 1rem;
+  padding: 30px;
   color: white;
   text-align: center;
   vertical-align: middle;
